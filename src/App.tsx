@@ -1,8 +1,16 @@
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [numbers, setNumbers] = useState('');
+
   function add(numbers: string): number {
-    return 0;
+    const extractedNumbers = numbers.split(',');
+    const total = extractedNumbers.reduce((acc, curr) => {
+      return acc + +curr;
+    }, 0);
+
+    return total;
   }
 
   return (
@@ -17,11 +25,18 @@ function App() {
         <input
           type='text'
           placeholder='Type something...'
+          onChange={(e) => setNumbers(e.target.value)}
           className='w-full p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 transition-all mb-4'
         />
-        <button className='w-full p-3 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-700 transition-all'>
-          Calculate
-        </button>
+        <div
+          className={`text-lg font-semibold text-center text-purple-700 p-3 rounded-lg mt-4 transition-all duration-300 transform ${
+            add(numbers)
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-4'
+          }`}
+        >
+          {add(numbers)}
+        </div>
       </div>
     </div>
   );
