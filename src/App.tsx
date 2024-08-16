@@ -5,7 +5,8 @@ function App() {
   const [numbers, setNumbers] = useState('');
 
   function add(numbers: string): number {
-    const extractedNumbers = numbers.split(',');
+    const sanitizedNumbers = numbers.replace(/\\n/g, ',');
+    const extractedNumbers = sanitizedNumbers.split(',');
     const total = extractedNumbers.reduce((acc, curr) => {
       return acc + +curr;
     }, 0);
