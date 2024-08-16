@@ -45,7 +45,7 @@ function App() {
               : 'opacity-0 translate-y-4'
           }`}
         >
-          {add(numbers)}
+          Total: {add(numbers)}
         </div>
       </div>
     </div>
