@@ -1,6 +1,10 @@
 import './App.css';
 
 function App() {
+  function add(numbers: string): number {
+    return 0;
+  }
+
   return (
     <div className='flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 p-4'>
       <div className='bg-white p-8 rounded-lg shadow-lg w-full max-w-md'>
