@@ -5,10 +5,19 @@ function App() {
   const [numbers, setNumbers] = useState('');
 
   function add(numbers: string): number {
-    const sanitizedNumbers = numbers.replace(/\\n/g, ',');
+    let delimiter = ',';
+
+    if (numbers.startsWith('//')) {
+      const delimiterEndIndex = numbers.indexOf('\\n');
+      delimiter = numbers.substring(2, delimiterEndIndex);
+      numbers = numbers.substring(delimiterEndIndex + 2);
+    }
+
+    const sanitizedNumbers = numbers.replace(/\\n/g, delimiter);
     const extractedNumbers = sanitizedNumbers.split(',');
+
     const total = extractedNumbers.reduce((acc, curr) => {
-      return acc + +curr;
+      return acc + (parseFloat(curr) || 0);
     }, 0);
 
     return total;
