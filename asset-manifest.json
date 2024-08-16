@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/anshuER/incubyte-task/static/css/main.ecccead3.css",
-    "main.js": "/anshuER/incubyte-task/static/js/main.8e623a74.js",
-    "index.html": "/anshuER/incubyte-task/index.html",
-    "main.ecccead3.css.map": "/anshuER/incubyte-task/static/css/main.ecccead3.css.map",
-    "main.8e623a74.js.map": "/anshuER/incubyte-task/static/js/main.8e623a74.js.map"
+    "main.css": "/incubyte-task/static/css/main.ecccead3.css",
+    "main.js": "/incubyte-task/static/js/main.8e623a74.js",
+    "index.html": "/incubyte-task/index.html",
+    "main.ecccead3.css.map": "/incubyte-task/static/css/main.ecccead3.css.map",
+    "main.8e623a74.js.map": "/incubyte-task/static/js/main.8e623a74.js.map"
   },
   "entrypoints": [
     "static/css/main.ecccead3.css",
